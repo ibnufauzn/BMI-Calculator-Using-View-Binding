@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="24dp"
+    >
+
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Jenis Kelamin :"
+        android:textSize="16dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@id/genderText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="84dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="54dp">
+        <RadioButton
+            android:id="@+id/genderMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gendermale"
+            android:padding="4dp"
+        />
+        <RadioButton
+            android:id="@+id/genderFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:padding="4dp"
+            android:text="@string/genderfemale"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/nameText"
+        app:layout_constraintTop_toBottomOf="@id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16dp"
+        android:text="Nama Lengkap :"
+        />
+
+    <EditText
+        android:id="@+id/name"
+        app:layout_constraintTop_toBottomOf="@id/nameText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nama Lengkap"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/textTb"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tinggi Badan (cm) :"
+        android:textSize="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <EditText
+        android:id="@+id/tb"
+        app:layout_constraintTop_toBottomOf="@id/textTb"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Tinggi Badan"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/textBb"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Berat Badan (kg) :"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tb"
+        android:layout_marginTop="16dp"
+        />
+
+    <EditText
+        android:id="@+id/bb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/textBb"
+        android:hint="Masukkan Berat Badan"
+        android:layout_marginTop="4dp"
+        />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hitung"
+        app:layout_constraintTop_toBottomOf="@id/bb"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

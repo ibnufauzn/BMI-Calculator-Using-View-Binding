@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+
+    <string name="gendermale">Laki-Laki</string>
+    <string name="genderfemale">Perempuan</string>
+</resources>
